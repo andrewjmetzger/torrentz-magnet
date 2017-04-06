@@ -49,7 +49,7 @@ if(list){
 	let trackers = Array.from(document.querySelectorAll(".trackers dl a")).map(node => node.textContent.trim()).concat(defaultTrackers);
 	let trackersCmps = trackers.reduce((result, uri) => result + "&tr=" + encodeURIComponent(uri), "");
 	let uri = `magnet:?xt=urn:btih:${hash}&dn=${encodeURIComponent(name)}${trackersCmps}`;
-	list.querySelector("dl:first-of-type").insertAdjacentHTML("beforebegin", `
+	list.querySelector("dl:first-of-type").insertAdjacentHTML("afterend", `
 		<dl>
 			<dt><a href="${uri}"><span class="${/(^|\.)torrentz2.eu$/.test(location.hostname) ? `j z s197"></span><span class="u"` : `u"`}>Magnet</span> <span class="n">${name}</span></a></dt>
 			<dd>Magnet</dd>
