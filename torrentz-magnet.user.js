@@ -49,7 +49,6 @@ if(list){
 	let trackers = Array.from(document.querySelectorAll(".trackers dl a")).map(node => node.textContent.trim()).concat(defaultTrackers);
 	let trackersCmps = trackers.reduce((result, uri) => result + "&tr=" + encodeURIComponent(uri), "");
 	let uri = `magnet:?xt=urn:btih:${hash}&dn=${encodeURIComponent(name)}${trackersCmps}`;
-	let magnetIcon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAZUlEQVQokc2RQQrAMAgE9+g/99/5yvaSWDUV0lMrDATMiIsAoIZVbV9jjEQVu/4HohZmAiCSLs63ZOa0Ivb6nThv9D5jkCNRcpHkJqqsXyGpe5VDMUVZ8uOAnCvl9yKpOCR+rsIFGyA1+Hqs6JoAAAAASUVORK5CYII=";// from https://commons.wikimedia.org/wiki/File:Magnet-icon.gif
 	list.querySelector("dl:first-of-type").insertAdjacentHTML("beforebegin", `
 		<dl>
 			<dt><a href="${uri}"><span class="${/(^|\.)torrentz2.eu$/.test(location.hostname) ? `j z s197"></span><span class="u"` : `u"`}>Magnet</span> <span class="n">${name}</span></a></dt>
